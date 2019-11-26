@@ -6,7 +6,7 @@
 /*   By: jsilance <jsilance@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 10:47:55 by jsilance          #+#    #+#             */
-/*   Updated: 2019/11/22 15:25:39 by jsilance         ###   ########.fr       */
+/*   Updated: 2019/11/26 03:39:15 by jsilance         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 # include <limits.h>
 
 int		get_next_line(int fd, char **line);
-int		str_liner(char *tmp, char **temp, char **line, int i);
+int		str_liner(char *tmp, char temp[OPEN_MAX][BUFFER_SIZE + 1],
+			char **line, int fd);
 char	*ft_strdup(const char *s);
 char	*ft_strstock(char *ptr, char str);
 
