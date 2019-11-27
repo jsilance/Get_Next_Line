@@ -6,7 +6,7 @@
 /*   By: jsilance <jsilance@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 22:48:38 by jsilance          #+#    #+#             */
-/*   Updated: 2019/11/26 03:39:30 by jsilance         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:05:21 by jsilance         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int			str_liner(char *tmp, char temp[OPEN_MAX][BUFFER_SIZE + 1],
 			temp[fd][j] = 0;
 			return (0);
 		}
-		else
-			*line = ft_strstock(*line, tmp[i++]);
+		else if (!(*line = ft_strstock(*line, tmp[i++])))
+			return (-1);
 	temp[fd][0] = 0;
 	return (1);
 }
